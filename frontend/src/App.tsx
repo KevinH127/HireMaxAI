@@ -6,11 +6,13 @@ import { UploadState } from './components/UploadState';
 import { ProcessingState } from './components/ProcessingState';
 import { ResultState } from './components/ResultState';
 
-export enum AppState {
-  IDLE = 'idle',
-  PROCESSING = 'processing',
-  READY = 'ready'
-}
+export const AppState = {
+  IDLE: 'idle',
+  PROCESSING: 'processing',
+  READY: 'ready'
+} as const;
+
+export type AppState = typeof AppState[keyof typeof AppState];
 
 const App: React.FC = () => {
   const [appState, setAppState] = useState<AppState>(AppState.IDLE);

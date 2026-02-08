@@ -1,7 +1,7 @@
 
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Download, RefreshCw, CheckCircle2, ChevronLeft, ChevronRight } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Download, RefreshCw, CheckCircle2 } from 'lucide-react';
 
 interface ResultStateProps {
   onReset: () => void;

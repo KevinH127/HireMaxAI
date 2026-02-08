@@ -51,7 +51,8 @@ const App: React.FC = () => {
     formData.append('file', file);
 
     try {
-      const response = await fetch('/api/upload-resume', {
+      const apiBase = import.meta.env.VITE_API_URL || '';
+      const response = await fetch(`${apiBase}/api/upload-resume`, {
         method: 'POST',
         body: formData,
       });
